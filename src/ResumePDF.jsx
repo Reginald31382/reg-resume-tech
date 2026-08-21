@@ -7,7 +7,6 @@ import pdfUrl from "./assets/tech.pdf";
 function ResumePDF() {
   return (
     <section className="resume-card">
-
       {/* Viewer Header */}
       <div className="resume-toolbar">
         <div className="resume-toolbar-title">
@@ -18,9 +17,7 @@ function ResumePDF() {
 
       {/* PDF Viewer */}
       <div className="viewer-container">
-        <Worker
-          workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js"
-        >
+        <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
           <Viewer fileUrl={pdfUrl} />
         </Worker>
       </div>
@@ -47,11 +44,9 @@ function ResumePDF() {
             <polyline points="7 10 12 15 17 10" />
             <line x1="12" y1="15" x2="12" y2="3" />
           </svg>
-
           Download Resume
         </a>
       </div>
-
     </section>
   );
 }
